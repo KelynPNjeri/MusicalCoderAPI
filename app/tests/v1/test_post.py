@@ -46,7 +46,8 @@ class TestPosts(bc):
         data = json.loads(response.data.decode())
         self.assertEqual(response.status_code, 201)
         self.assertEqual(data["message"], "Post Created Successfully.")
-        get_response = self.client.get('/api/v1/posts/1', content_type=self.content_type)
+        get_response = self.client.get('/api/v1/posts/{}'.format(data['post']['Post ID']), 
+                                       content_type=self.content_type)
         get_data = json.loads(get_response.data.decode())
         self.assertEqual(get_response.status_code, 200)
         self.assertEqual(get_data["message"], "Success")
