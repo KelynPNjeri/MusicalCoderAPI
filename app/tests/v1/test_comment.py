@@ -4,9 +4,11 @@ from .basecase import BaseCase as bc
 
 class TestComments(bc):
     """
-    Testing comments Endpoints
+    Testing comments Endpoints.
+    This class inherits from BaseCase.
     """
     def setUp(self):
+
         bc.setUp(self)
 
     def test_creating_comments(self):
