@@ -17,7 +17,7 @@ class PostsValidator:
             "Post Title": fields.String(description="Post Title"),
             "Post Body": fields.String(description="Post Body"),
             "Post Author": fields.String(description="Post Author"),
-            "Post Category": fields.String(description="Post Category"),
+            "Post Category": fields.String(description="Post Category")
         })
     post_response = posts_namespace.model(
         "API response for any GET request",
